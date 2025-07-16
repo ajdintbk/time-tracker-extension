@@ -1,0 +1,51 @@
+{
+  "name": "time-tracker",
+  "displayName": "time-tracker",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.76.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "time-tracker.setSupabaseCredentials",
+        "title": "Time Tracker: Set Supabase Credentials"
+      },
+      {
+        "command": "time-tracker.start",
+        "title": "Time Tracker: Start"
+      },
+      {
+        "command": "time-tracker.stop",
+        "title": "Time Tracker: Stop"
+      },
+      {
+        "command": "time-tracker.sync",
+        "title": "Time Tracker: Sync Logs"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.102.0",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.25.1"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.51.0",
+    "dotenv": "^17.2.0"
+  }
+}
